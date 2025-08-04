@@ -77,8 +77,8 @@ add_action('save_post_page', 'save_shop_metabox_content');
 function save_shop_metabox_content($post_id)
 {
     if($post_id == 949 && isset($_POST['description_custom_field']) && ! empty($_POST['description_custom_field']) ) {
-        update_post_meta($post_id, 'description_custom_field',  sanitize_title($_POST['description_custom_field']));
+        update_post_meta($post_id, 'description_custom_field',  $_POST['description_custom_field']);
     } elseif($post_id == 2913 && isset($_POST['events_custom_field']) && ! empty($_POST['events_custom_field']) ) {
-        update_post_meta($post_id, 'events_custom_field',  sanitize_title($_POST['events_custom_field']));
+        update_post_meta($post_id, 'events_custom_field',  $_POST['events_custom_field']);
     }
 }
