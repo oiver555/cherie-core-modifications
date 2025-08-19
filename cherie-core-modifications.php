@@ -21,7 +21,9 @@ add_action('elementor/widgets/register', 'register_new_widgets');
 function register_new_widgets($widgets_manager)
 {
     include CCM_ROOT_DIR . 'widgets/full-page-service.php';
+    include CCM_ROOT_DIR . 'widgets/accordion-tabs.php';
     $widgets_manager->register(new Widget_Art_Full_Page_Services_Modifications());
+    $widgets_manager->register(new Widget_Accordion_Tabs_Modifications());
 }
 
 
